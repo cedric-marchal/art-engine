@@ -16,8 +16,9 @@ const layersDir = path.join(basePath, "/layers");
  ***********************/
 
 const description =
-  "This is the description of your NFT project, remember to replace this";
-const baseUri = "ipfs://NewUriToReplace";
+  "This is a collection of 20 NFTs from Mastering NFTs – BenBk";
+const baseUri =
+  "ipfs://bafybeiejomsjpkfyljuuxr5pmcsnplvvhukvn5gm466nhqnsiuavuiltde";
 
 const outputJPEG = false; // if false, the generator outputs png's
 
@@ -28,8 +29,8 @@ const outputJPEG = false; // if false, the generator outputs png's
 const startIndex = 0;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 1000,
+  height: 1000,
   smoothing: true, // set to false when up-scaling pixel art.
 };
 
@@ -40,22 +41,13 @@ const background = {
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 10,
-    namePrefix: "Series 2", // Use to add a name to Metadata `name:`
+    growEditionSizeTo: 20,
+    namePrefix: "Mastering NFTs – BenBk", // Use to add a name to Metadata `name:`
     layersOrder: [
-      { name: "Background" },
-      {
-        name: "Back Accessory",
-        // options: {
-        //   bypassDNA: true,
-        // },
-      },
-      { name: "Head" },
-      { name: "Clothes" },
-      { name: "Eyes" },
-      { name: "Hair" },
-      { name: "Accessory" },
-      { name: "Shirt Accessories" },
+      { name: "background" },
+      { name: "head" },
+      { name: "eyes" },
+      { name: "mouth" },
     ],
   },
   // {
@@ -153,7 +145,7 @@ const hashImages = true;
 
 const rarityDelimiter = "#";
 
-const uniqueDnaTorrance = 10000;
+const uniqueDnaTorrance = 100;
 
 /**
  * Set to true to always use the root folder as trait_type
